@@ -1,7 +1,8 @@
 {
     "perl"        : "6.*",
     "name"        : "Task::Star",
-    "version"     : "*",
+    "author"      : "github:stmuk",
+    "version"     : "2017.04",
     "description" : "Meta-package for actual modules included in Rakudo Star. Synced with its release",
     "depends"     : [ 
         "DBIish",
