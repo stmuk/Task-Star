@@ -2,7 +2,7 @@
     "perl"        : "6.*",
     "name"        : "Task::Star",
     "version"     : "*",
-    "description" : "Meta-package for modules included in Rakudo Star",
+    "description" : "Meta-package for actual modules included in Rakudo Star. Synced with its release",
     "depends"     : [ 
         "DBIish",
         "Debugger::UI::CommandLine",
@@ -29,7 +29,7 @@
         "SVG",
         "SVG::Plot",
         "Shell::Command",
-        "TAP::Harness6",
+        "TAP::Harness",
         "Template::Mojo",
         "Terminal::ANSIColor",
         "Test::Mock",
@@ -40,6 +40,6 @@
         "zef"
     ],
     "provides" : { },
-    "source-url"  : "git://github.com/tadzik/Task-Star.git"
+    "source-url"  : "git://github.com/stmuk/Task-Star.git"
 }
 
