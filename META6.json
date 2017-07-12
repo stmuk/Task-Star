@@ -23,6 +23,7 @@
         "LibraryMake",
         "Linenoise",
         "MIME::Base64",
+        "OO::Monitors",
         "NativeHelpers::Blob",
         "PSGI",
         "Pod::To::BigPage",
