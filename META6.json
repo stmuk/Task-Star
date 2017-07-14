@@ -8,6 +8,7 @@
         "DBIish",
         "Debugger::UI::CommandLine",
         "Digest::MD5",
+        "Encode",
         "File::Directory::Tree",
         "File::Find",
         "File::Temp",
