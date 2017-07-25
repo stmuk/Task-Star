@@ -13,7 +13,7 @@ install:
   - rakudobrew build moar nom
   - rakudobrew build zef
   - cd %APPVEYOR_BUILD_FOLDER%
-  - zef --verbose --depsonly install .
+  - zef --verbose --depsonly --force-test install .
 
 test_script:
   - perl6 -e 'say "1..1\nok 1"'
