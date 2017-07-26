@@ -5,17 +5,23 @@ platform: x64
 build: off
 
 install:
-    # gcc 7.1 is broken with Linenoise
-  - choco install strawberryperl --version 5.24.2.1
-    # use mingw gcc not MSVC
-  - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
+  - choco install strawberryperl
+  - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\rakudo\bin;c:\rakudo\share\perl6\site\bin;%PATH%
+  - SETX PATH "%PATH%"
   - gcc --version
-  - git clone https://github.com/tadzik/rakudobrew %USERPROFILE%\rakudobrew
-  - SET PATH=%USERPROFILE%\rakudobrew\bin;%PATH%
-  - rakudobrew build moar nom
-  - rakudobrew build zef
+  - git clone https://github.com/rakudo/rakudo.git
+  - cd rakudo
+  - git checkout 2017.07
+  - perl Configure.pl  --prefix=C:\rakudo --gen-moar
+  - gmake install
+  - where perl6
+  - perl6 -v
+  - git clone https://github.com/ugexe/zef.git
+  - cd zef
+  - C:\rakudo\bin\perl6 -Ilib bin/zef install .
   - cd %APPVEYOR_BUILD_FOLDER%
-  - zef --verbose --depsonly --force-test install .
+  - where zef
+  - zef --debug --depsonly --force-test install .
 
 test_script:
   - perl6 -e 'say "1..1\nok 1"'
