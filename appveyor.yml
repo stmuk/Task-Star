@@ -5,7 +5,9 @@ platform: x64
 build: off
 
 install:
-  - choco install strawberryperl
+    # gcc 7.1 is broken with Linenoise
+  - choco install strawberryperl --version 5.24.2.1
+    # use mingw gcc not MSVC
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
   - gcc --version
   - git clone https://github.com/tadzik/rakudobrew %USERPROFILE%\rakudobrew
