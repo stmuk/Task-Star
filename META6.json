@@ -41,7 +41,7 @@
         "URI",
         "XML::Writer",
         "p6doc",
-        "panda",
+        "panda-stub",
         "zef"
     ],
     "provides" : { },
