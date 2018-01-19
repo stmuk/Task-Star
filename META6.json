@@ -41,6 +41,7 @@
         "Shell::Command",
         "TAP::Harness",
         "Template::Mojo",
+        "Template::Mustache",
         "Terminal::ANSIColor",
         "Test::Meta",
         "Test::Mock",
