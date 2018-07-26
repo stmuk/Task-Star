@@ -45,7 +45,7 @@
         "Template::Mojo",
         "Template::Mustache",
         "Terminal::ANSIColor",
-        "Test::Meta",
+        "Test::META",
         "Test::Mock",
         "Test::When",
         "URI",
